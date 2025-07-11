@@ -99,7 +99,7 @@ for key in ['assistant', 'thread_id', 'messages', 'files_uploaded', 'vector_stor
 st.title("Chatbots for Education") # TO-D0 - FILL IN YOUR APP TITLE
 st.subheader("") # TO-D0 - FILL IN YOUR APP SUBHEADER - What message should the user see first?
 
-def list_pdfs(folder:str):
+def list_pdfs(folder:str) -> list[pathlib.Path]:
     p = pathlib.Path(folder)
     return sorted(p.glob("*.pdf")) if p.is_dir() else []
 
